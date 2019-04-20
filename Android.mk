@@ -85,11 +85,11 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := minimedia.cpp
 LOCAL_C_INCLUDES := frameworks/av/services/camera/libcameraservice \
                     frameworks/av/media/libmediaplayerservice \
-                    frameworks/av/services/audiopolicy \
+		    frameworks/av/services/audiopolicy \
                     system/media/camera/include
 LOCAL_SHARED_LIBRARIES := libcameraservice \
                           libmediaplayerservice \
-                          libaudiopolicyservice \
+			  libaudiopolicyservice \
                           libcamera_client \
                           libutils \
                           libmedia \
@@ -104,7 +104,9 @@ LOCAL_C_INCLUDES += frameworks/native/libs/sensor/include \
 LOCAL_SHARED_LIBRARIES += liblog \
                           libhidlbase \
                           libhidltransport \
+                          libhwbinder \
                           libsensor \
+                          android.frameworks.sensorservice@1.0 \
                           android.hardware.camera.common@1.0 \
                           android.hardware.camera.provider@2.4
 endif
@@ -132,7 +134,9 @@ LOCAL_C_INCLUDES := frameworks/native/libs/sensor/include \
 LOCAL_SHARED_LIBRARIES += liblog \
                           libhidlbase \
                           libhidltransport \
+                          libhwbinder \
                           libsensor \
+                          android.frameworks.sensorservice@1.0 \
                           android.hardware.camera.common@1.0 \
                           android.hardware.camera.provider@2.4
 endif
@@ -172,7 +176,9 @@ LOCAL_SHARED_LIBRARIES += liblog \
                           libcamera_client \
                           libhidlbase \
                           libhidltransport \
+                          libhwbinder \
                           libsensor \
+                          android.frameworks.sensorservice@1.0 \
                           android.hardware.camera.common@1.0 \
                           android.hardware.camera.provider@2.4
 endif
